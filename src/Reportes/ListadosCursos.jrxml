@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="33b17e13-a3c8-4aeb-bdc9-c1091547a689">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM Cursos]]>
+	</queryString>
+	<field name="codCurso" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombCurso" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codDoc" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="121" y="23" width="315" height="43" uuid="482263b4-8e77-46ed-a541-a6ea731b4613"/>
+				<textElement>
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[LISTADOS DE CURSOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="31" width="126" height="20" uuid="8f485b46-eafa-4103-91d1-52fc90958f56"/>
+				<text><![CDATA[CODIGO DEL CURSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="213" y="31" width="126" height="20" uuid="8e0cd34d-3b44-42c3-b0af-1ba5d3f9d79c"/>
+				<text><![CDATA[NOMBRE DEL CURSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="31" width="126" height="20" uuid="8fb86ff1-01fc-4343-8112-a19eb94071ae"/>
+				<text><![CDATA[CODIGO DEL DOCENTE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="436" y="46" width="100" height="20" uuid="fe50bd32-1b89-45b8-aa6a-d215e89e95fe"/>
+				<textFieldExpression><![CDATA[$F{codDoc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="46" width="100" height="20" uuid="c4e14c03-ea29-4099-b390-e06c5a786465"/>
+				<textFieldExpression><![CDATA[$F{nombCurso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="46" width="100" height="20" uuid="5c0901fe-e46f-4caa-941e-c82d367aa838"/>
+				<textFieldExpression><![CDATA[$F{codCurso}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
